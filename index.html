@@ -28,7 +28,7 @@ body{font-family:Inter,system-ui,sans-serif;background:var(--barbg);display:flex
 .frames{flex:1;position:relative;background:var(--barbg)}
 iframe.frame{position:absolute;inset:0;width:100%;height:100%;border:0;display:none;background:var(--barbg)}
 iframe.frame.active{display:block}
-@media(max-width:900px){.tb-brand,.tb-sep{display:none}.tabs{margin-left:0;flex:1 1 auto;min-width:0;overflow-x:auto;-webkit-overflow-scrolling:touch}.tab{flex:none;padding:7px 9px;font-size:11px}.book{display:none}}
+@media(max-width:1040px){.tb-brand,.tb-sep{display:none}.tabs{margin-left:0;flex:1 1 auto;min-width:0;overflow-x:auto;-webkit-overflow-scrolling:touch}.tab{flex:none;padding:7px 9px;font-size:11px}.book{display:none}}
 </style>
 <script>(function(){try{var t=localStorage.getItem('imp_theme');document.documentElement.setAttribute('data-theme',t==='dark'?'dark':'light');}catch(e){}})();</script>
 </head>
@@ -40,6 +40,7 @@ iframe.frame.active{display:block}
     <button class="tab" data-k="overview">Overview</button>
     <button class="tab" data-k="whitespace">White Space</button>
     <button class="tab" data-k="targeting">Targeting</button>
+    <button class="tab" data-k="messaging">Messaging</button>
     <button class="tab" data-k="ecosystem">Ecosystem</button>
     <button class="tab" data-k="howitworks">How It Works</button>
     <button class="tab" data-k="build">Campaign Build</button>
@@ -1036,6 +1037,364 @@ svg.flow, svg.conv{width:100%;height:auto;display:block}
 </body>
 </html>
 "></iframe>
+  <iframe class="frame" id="f-messaging" title="Messaging" srcdoc="<!DOCTYPE html>
+<html lang=&quot;en&quot; data-theme=&quot;light&quot;>
+<head>
+<meta charset=&quot;utf-8&quot;/>
+<meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;/>
+<meta name=&quot;robots&quot; content=&quot;noindex, nofollow&quot;/>
+<title>Genesis Computing</title>
+<link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;><link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin>
+<link href=&quot;https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,600&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
+<style>
+:root{
+--bg:#F4F1EA;--surface:#FCFBF7;--surface2:#F6F3EC;--court:#ECE8DD;--line:#DED9CC;
+--ink:#17171B;--chalk:#46464E;--muted:#6E6A5F;
+--canopy:#D4FF3D;--blue:#5BB8E0;--blued:#1B9BD1;--terra:#E0703A;--terrad:#C4521F;
+--clay:#FFB627;--moss:#7BAA3E;--pink:#FF2D7A;--navy:#0D2D5E;--navyd:#071A38;--hazard:#FF5A1F;
+--canopy-text:#526600;--blue-text:#0f6a92;--moss-text:#3d6318;--clay-text:#8a5e00;--terra-text:#9c3d13;--pink-text:#c01458;
+--topbg:rgba(244,241,234,.9);
+}
+[data-theme=&quot;dark&quot;]{
+--bg:#0A0A0C;--surface:#15151A;--surface2:#1a1a20;--court:#22222A;--line:#26262f;
+--ink:#F4F1EA;--chalk:#D8D4C8;--muted:#8f8c7f;
+--canopy-text:#D4FF3D;--blue-text:#5BB8E0;--moss-text:#7BAA3E;--clay-text:#FFB627;--terra-text:#E0703A;--pink-text:#FF2D7A;
+--topbg:rgba(10,10,12,.92);
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.container{max-width:1180px;margin:0 auto;padding:0 28px}
+.top{position:sticky;top:0;z-index:50;background:var(--topbg);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .container{display:flex;align-items:center;gap:22px;height:56px}
+.brand{font-family:'Archivo Black';font-size:16px;letter-spacing:-.01em;color:var(--ink)}
+.brand span{color:var(--blue-text)}
+.top nav{display:flex;gap:18px;margin-left:auto;flex-wrap:wrap}
+.top nav a{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);text-decoration:none;white-space:nowrap}
+.top nav a:hover{color:var(--canopy-text)}
+.tgl{margin-left:8px;font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);background:transparent;border:1px solid var(--line);border-radius:6px;padding:6px 11px;cursor:pointer}
+.tgl:hover{color:var(--ink);border-color:var(--muted)}
+@media(max-width:860px){.top nav{display:none}.tgl{margin-left:auto}}
+.hero{padding:64px 0 40px;border-bottom:1px solid var(--line)}
+.kick{font-family:'JetBrains Mono';font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--pink-text);margin-bottom:14px}
+h1{font-family:'Archivo Black';font-size:clamp(34px,5.4vw,62px);line-height:1.02;margin:0 0 18px;letter-spacing:-.02em;color:var(--ink)}
+h1 em{font-style:normal;color:var(--canopy-text)}
+h1 .bl{color:var(--blue-text)}
+.lede{font-size:clamp(16px,1.7vw,19px);line-height:1.5;color:var(--chalk);max-width:900px}
+.thesis{margin-top:22px;background:var(--navyd);border-radius:14px;padding:20px 22px}
+.thesis .k{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#D4FF3D;margin-bottom:8px}
+.thesis p{margin:0;font-size:16px;line-height:1.5;color:#F4F1EA}
+.thesis b{color:#D4FF3D}
+.phases{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
+.phase{flex:1;min-width:200px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.phase .pn{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+.phase h4{font-family:'Archivo Black';font-size:15px;margin:6px 0 4px;color:var(--ink)}
+.phase p{margin:0;font-size:12.5px;color:var(--chalk);line-height:1.4}
+.phase.p0{border-top:3px solid var(--muted)}.phase.p1{border-top:3px solid var(--blue)}
+.phase.p2{border-top:3px solid var(--clay)}.phase.p3{border-top:3px solid var(--moss)}
+.sec{padding:56px 0;border-top:1px solid var(--line)}
+.sk{font-family:'JetBrains Mono';font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--pink-text);margin-bottom:12px}
+h2{font-family:'Archivo Black';font-size:clamp(26px,3.4vw,40px);line-height:1.05;margin:0 0 14px;letter-spacing:-.01em;color:var(--ink)}
+h2 em{font-style:normal;color:var(--canopy-text)}h2 .bl{color:var(--blue-text)}h2 .cl{color:var(--clay-text)}h2 .ms{color:var(--moss-text)}h2 .te{color:var(--terra-text)}
+.intro{font-size:16px;line-height:1.55;color:var(--chalk);max-width:920px;margin-bottom:24px}
+.intro b{color:var(--ink)}
+.gantt{display:grid;grid-template-columns:150px repeat(4,1fr);gap:8px;align-items:center;margin-top:8px}
+.gantt .gh{font-family:'JetBrains Mono';font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);padding:0 6px}
+.gantt .gl{font-family:'JetBrains Mono';font-size:11.5px;color:var(--ink);font-weight:700;padding-right:6px;display:flex;align-items:center;gap:8px}
+.gantt .gl .dot{width:9px;height:9px;border-radius:2px;flex:none}
+.bar{min-height:34px;border-radius:7px;display:flex;align-items:center;padding:5px 10px;font-family:'JetBrains Mono';font-size:10.5px;line-height:1.25;color:#0A0A0C;font-weight:700}
+.bar.ghost{background:transparent;border:1px dashed var(--line);color:var(--muted);font-weight:500}
+.bar.empty{background:transparent}
+.b-can{background:var(--canopy)}.b-blue{background:var(--blue)}.b-terra{background:var(--terra)}
+.b-clay{background:var(--clay)}.b-moss{background:var(--moss)}
+.b-pink{background:var(--pink);color:#0A0A0C}
+.sigband{grid-column:2 / -1}
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:820px){.cols2,.cols3{grid-template-columns:1fr}}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 20px 22px}
+.panel.tl{border-top:4px solid var(--canopy)}.panel.tb{border-top:4px solid var(--blue)}
+.panel.tt{border-top:4px solid var(--terra)}.panel.tc{border-top:4px solid var(--clay)}
+.panel.tm{border-top:4px solid var(--moss)}.panel.tp{border-top:4px solid var(--pink)}
+.panel h4{font-family:'Archivo Black';font-size:16px;margin:0 0 8px;color:var(--ink)}
+.panel p{font-size:13.5px;line-height:1.5;color:var(--chalk);margin:0 0 8px}
+.pill{display:inline-block;font-family:'JetBrains Mono';font-size:10px;letter-spacing:.05em;text-transform:uppercase;padding:4px 10px;border-radius:20px;font-weight:700}
+.p-canopy{background:rgba(212,255,61,.16);color:var(--canopy-text)}
+.p-blue{background:rgba(91,184,224,.18);color:var(--blue-text)}
+.p-clay{background:rgba(255,182,39,.2);color:var(--clay-text)}
+.p-moss{background:rgba(123,170,62,.15);color:var(--moss-text)}
+.p-terra{background:rgba(224,112,58,.18);color:var(--terra-text)}
+.p-pink{background:rgba(255,45,122,.16);color:var(--pink-text)}
+ul.clean{list-style:none;padding:0;margin:0}
+ul.clean li{position:relative;padding-left:18px;margin-bottom:9px;font-size:13.5px;line-height:1.45;color:var(--chalk)}
+ul.clean li:before{content:&quot;&quot;;position:absolute;left:0;top:8px;width:7px;height:7px;border-radius:2px;background:var(--canopy-text)}
+ul.clean li b{color:var(--ink)}
+.callout{margin-top:22px;border-radius:12px;padding:16px 20px;background:rgba(82,102,0,.055);border:1px solid rgba(82,102,0,.32)}
+[data-theme=&quot;dark&quot;] .callout{background:rgba(212,255,61,.05);border-color:rgba(212,255,61,.25)}
+.callout .k{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.06em;color:var(--canopy-text);margin-bottom:6px}
+.callout p{margin:0;font-size:14px;line-height:1.5;color:var(--ink)}
+.callout b{color:var(--canopy-text)}
+.note{font-size:12px;color:var(--muted);line-height:1.5;margin-top:14px}
+.dials{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:6px}
+@media(max-width:820px){.dials{grid-template-columns:1fr 1fr}}
+.dial{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.dial .dv{font-family:'Archivo Black';font-size:22px;color:var(--canopy-text)}
+.dial .dl{font-family:'JetBrains Mono';font-size:10px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-top:2px;line-height:1.3}
+.settings{display:flex;gap:10px;flex-wrap:wrap;margin:4px 0 20px}
+.chip{font-family:'JetBrains Mono';font-size:11px;background:var(--court);border:1px solid var(--line);color:var(--chalk);padding:6px 11px;border-radius:6px}
+.chip b{color:var(--canopy-text)}
+.bm{display:grid;grid-template-columns:170px repeat(4,1fr);gap:8px;margin-top:8px}
+.bm .h{font-family:'JetBrains Mono';font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);padding:2px 6px}
+.bm .r{font-family:'JetBrains Mono';font-size:11.5px;color:var(--ink);font-weight:700;display:flex;align-items:center;padding-right:6px;line-height:1.25}
+.bm .c{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:9px 11px;font-size:11.5px;color:var(--chalk);line-height:1.35}
+.bm .c.on{border-color:rgba(15,106,146,.45)}
+.bm .c.dim{background:transparent;border-style:dashed;color:var(--muted)}
+.bm .c .t{display:block;font-family:'JetBrains Mono';font-size:9.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--blue-text);margin-bottom:3px}
+.eco{display:grid;grid-template-columns:120px repeat(5,1fr);gap:7px;margin-top:8px}
+.eco .h{font-family:'JetBrains Mono';font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);padding:2px 4px;text-align:center}
+.eco .rl{font-family:'JetBrains Mono';font-size:11px;color:var(--ink);font-weight:700;display:flex;align-items:center}
+.eco .cell{background:var(--surface);border:1px solid var(--line);border-radius:7px;padding:8px 9px;font-size:11px;color:var(--chalk);line-height:1.3;min-height:52px}
+.eco .cell.dim{background:transparent;border-style:dashed;color:var(--muted)}
+.eco .cell b{color:var(--ink);display:block;font-size:11px}
+.scrollx{overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media(max-width:700px){.gantt{min-width:640px}.bm{min-width:600px}.eco{min-width:640px}}
+.foot{padding:30px 0 60px;border-top:1px solid var(--line);color:var(--muted);font-size:12px;line-height:1.6}
+.foot a{color:var(--blue-text)}
+
+/* ===== room view components ===== */
+.dark-panel{background:var(--navyd,#071A38);border-radius:16px;padding:26px 28px}
+.dark-panel,.dark-panel *{--ink:#F4F1EA;--chalk:rgba(216,212,200,.9);--muted:rgba(216,212,200,.7)}
+.dark-panel h2,.dark-panel h3,.dark-panel p,.dark-panel li{color:#F4F1EA}
+.dark-panel .k{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#D4FF3D;margin-bottom:8px}
+.dark-panel .btn{display:inline-block;background:#D4FF3D;color:#0A0A0C;font-family:'JetBrains Mono';font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:14px 24px;border-radius:9px;text-decoration:none;margin-top:6px}
+.dark-panel .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.85)}
+.dark-panel .btn.ghost:hover{border-color:#fff;color:#fff}
+/* move cards (overview) */
+.moves{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
+@media(max-width:760px){.moves{grid-template-columns:1fr}}
+.move{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px;border-left:4px solid var(--canopy)}
+.move .mn{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.06em;color:var(--canopy-text);text-transform:uppercase}
+.move h4{font-family:'Archivo Black';font-size:16px;margin:6px 0 6px;color:var(--ink)}
+.move p{font-size:13.5px;color:var(--chalk);line-height:1.5;margin:0}
+.move .to{font-family:'JetBrains Mono';font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-top:10px;display:block}
+/* growth system board */
+.gsb{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:10px}
+.gsb .col{display:flex;flex-direction:column;gap:8px}
+.gsb .colh{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:2px 4px;text-align:center;border-bottom:2px solid var(--line);padding-bottom:8px}
+.gsb .m{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 11px}
+.gsb .m .mt{font-family:'Inter';font-size:12.5px;font-weight:700;color:var(--ink);line-height:1.25}
+.gsb .m .mr{display:flex;gap:5px;align-items:center;margin-top:7px;flex-wrap:wrap}
+.badge{font-family:'JetBrains Mono';font-size:9px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:3px 7px;border-radius:5px}
+.b-start{background:var(--canopy);color:#0A0A0C}
+.b-build{background:rgba(91,184,224,.2);color:var(--blue-text)}
+.b-later{background:rgba(0,0,0,.06);color:var(--muted)}
+[data-theme=&quot;dark&quot;] .b-later{background:rgba(255,255,255,.08)}
+.owner{font-family:'JetBrains Mono';font-size:9px;color:var(--muted);letter-spacing:.03em}
+@media(max-width:820px){.gsb{grid-template-columns:1fr;gap:16px}.gsb .colh{text-align:left}}
+/* channel stack (how it works) */
+.chan{display:flex;flex-direction:column;gap:14px;margin-top:8px}
+.chan .c{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--line);border-radius:12px;padding:18px 22px}
+.chan .c.cre{border-left-color:var(--canopy)} .chan .c.con{border-left-color:var(--blue)} .chan .c.cap{border-left-color:var(--terra)} .chan .c.ext{border-left-color:var(--clay)} .chan .c.act{border-left-color:var(--moss)}
+.chan .c .ch{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.chan .c .lbl{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:700}
+.chan .c.cre .lbl{color:var(--canopy-text)} .chan .c.con .lbl{color:var(--blue-text)} .chan .c.cap .lbl{color:var(--terra-text)} .chan .c.ext .lbl{color:var(--clay-text)} .chan .c.act .lbl{color:var(--moss-text)}
+.chan .c h4{font-family:'Archivo Black';font-size:16px;color:var(--ink);margin:0}
+.chan .c .tags{margin-left:auto;font-family:'JetBrains Mono';font-size:10.5px;color:var(--muted)}
+.chan .c p{font-size:13.5px;color:var(--chalk);line-height:1.5;margin:0 0 10px}
+.chan .c .why{background:rgba(0,0,0,.04);border-radius:8px;padding:9px 12px;font-size:12.5px;color:var(--ink)}
+[data-theme=&quot;dark&quot;] .chan .c .why{background:rgba(255,255,255,.05)}
+.chan .c .why b{color:var(--canopy-text)}
+/* pricing matrix */
+.pmwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:10px}
+.pm{width:100%;border-collapse:separate;border-spacing:0;min-width:720px}
+.pm th,.pm td{text-align:left;padding:12px 14px;vertical-align:top;border-bottom:1px solid var(--line);font-size:13px}
+.pm thead th{vertical-align:bottom}
+.pm .rl{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);width:150px}
+.pm .oname{font-family:'Archivo Black';font-size:15px;color:var(--ink)}
+.pm .oprice{font-family:'Archivo Black';font-size:22px;color:var(--ink);margin-top:4px}
+.pm .oper{font-family:'JetBrains Mono';font-size:11px;color:var(--muted)}
+.pm .ospend{font-size:11.5px;color:var(--muted);margin-top:4px;line-height:1.4}
+.pm .col-rec{background:#071A38;border-radius:12px 12px 0 0}
+.pm td.col-rec{background:rgba(7,26,56,.05)}
+[data-theme=&quot;dark&quot;] .pm td.col-rec{background:rgba(212,255,61,.05)}
+.pm th.col-rec .oname{color:#D4FF3D}
+.pm th.col-rec .oprice{color:#fff}
+.pm th.col-rec .oper,.pm th.col-rec .ospend{color:rgba(216,212,200,.8)}
+.pm .recpill{display:inline-block;font-family:'JetBrains Mono';font-size:9px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;background:#D4FF3D;color:#0A0A0C;padding:3px 8px;border-radius:5px;margin-bottom:8px}
+.pm .yes{color:var(--moss-text);font-weight:700}
+.pm .no{color:var(--muted)}
+.pm .part{color:var(--clay-text)}
+.pm .sec td{font-family:'JetBrains Mono';font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:rgba(0,0,0,.03);padding-top:14px}
+[data-theme=&quot;dark&quot;] .pm .sec td{background:rgba(255,255,255,.04)}
+.pm .cta a{display:inline-block;font-family:'JetBrains Mono';font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:9px 14px;border-radius:7px;background:var(--canopy);color:#0A0A0C;text-decoration:none}
+/* case cards */
+.cases{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:8px}
+@media(max-width:860px){.cases{grid-template-columns:1fr}}
+.case{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px;border-top:4px solid var(--canopy)}
+.case .metric{font-family:'Archivo Black';font-size:22px;color:var(--canopy-text);line-height:1.1}
+.case h4{font-family:'Archivo Black';font-size:14px;color:var(--ink);margin:8px 0 6px}
+.case p{font-size:12.5px;color:var(--chalk);line-height:1.45;margin:0 0 8px}
+.case .why{font-size:12px;color:var(--ink)}
+.case .why b{color:var(--canopy-text)}
+/* video */
+.video{position:relative;padding-bottom:56.25%;height:0;border-radius:12px;overflow:hidden;margin-top:14px;border:1px solid var(--line)}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+</style>
+<script>(function(){try{var t=localStorage.getItem('imp_theme');document.documentElement.setAttribute('data-theme',t==='dark'?'dark':'light');}catch(e){}})();</script>
+</head>
+<body>
+<style>
+.mmap{display:grid;grid-template-columns:150px 1fr 1fr 1fr;gap:8px;margin-top:14px}
+.mmap .mh{font-family:'JetBrains Mono';font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:4px 8px}
+.mmap .mp{font-family:'JetBrains Mono';font-size:12px;color:var(--ink);font-weight:700;display:flex;align-items:center;padding:0 6px}
+.mmap .mc{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:12px;color:var(--chalk);line-height:1.4}
+.mmap .mc .pl{display:block;margin-top:6px;font-family:'JetBrains Mono';font-size:9px;color:var(--canopy-text);letter-spacing:.03em;text-transform:uppercase}
+@media(max-width:820px){.mmap{grid-template-columns:1fr}.mmap .mh{display:none}.mmap .mp{padding-top:10px}}
+.smatch{display:grid;grid-template-columns:1fr 1.5fr;gap:12px;border-top:1px solid var(--line);padding:11px 2px}
+.smatch .q{font-family:'JetBrains Mono';font-size:12.5px;color:var(--ink);font-weight:700}
+.smatch .m{font-size:13px;color:var(--chalk);line-height:1.45}
+.smatch .m .pl{font-family:'JetBrains Mono';font-size:9.5px;color:var(--canopy-text);text-transform:uppercase;letter-spacing:.04em;margin-left:4px}
+@media(max-width:640px){.smatch{grid-template-columns:1fr;gap:3px}}
+.ptable{width:100%;border-collapse:collapse;margin-top:10px;font-size:13px}
+.ptable th{text-align:left;font-family:'JetBrains Mono';font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);padding:8px 10px;border-bottom:1px solid var(--line)}
+.ptable td{padding:9px 10px;border-bottom:1px solid var(--line);color:var(--chalk);vertical-align:top;line-height:1.4}
+.ptable td b{color:var(--ink)}
+.have{color:var(--moss-text);font-family:'JetBrains Mono';font-size:10px;font-weight:700;text-transform:uppercase;white-space:nowrap}
+.tobuild{color:var(--clay-text);font-family:'JetBrains Mono';font-size:10px;font-weight:700;text-transform:uppercase;white-space:nowrap}
+.ptwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media(max-width:640px){.ptable{min-width:560px}}
+</style>
+
+<header class=&quot;hero&quot;><div class=&quot;container&quot;>
+  <div class=&quot;kick&quot;>For Genesis Computing &amp;middot; messaging and offer</div>
+  <h1>What we <em>say</em>, to whom, and what we <span class=&quot;bl&quot;>ask</span></h1>
+  <p class=&quot;lede&quot;>Every messaging decision here traces back to a white-space gap and a target buyer. This is the framework the creative is built against, so the ads are precise instead of spray-and-pray, and it answers the relevance problem head on: a hedge-fund story does not land for a bank.</p>
+</div></header>
+
+<section class=&quot;sec&quot;><div class=&quot;container&quot;>
+  <div class=&quot;sk&quot;>Positioning foundation</div>
+  <h2>Own what nobody else can <em>truthfully</em> say</h2>
+  <div class=&quot;dark-panel&quot; style=&quot;margin-bottom:18px&quot;>
+    <div class=&quot;k&quot;>// the core positioning statement</div>
+    <p style=&quot;font-size:16px;line-height:1.5;margin:0&quot;>The only autonomous multi-agent data-engineering team that runs inside your own Snowflake or Databricks environment and executes the full pipeline lifecycle end to end, so enterprises add data capacity without adding headcount.</p>
+  </div>
+  <div class=&quot;cols2&quot;>
+    <div class=&quot;panel tt&quot;><span class=&quot;pill p-terra&quot;>Avoid, the market says it</span><ul class=&quot;clean&quot; style=&quot;margin-top:10px&quot;>
+      <li><b>Copilot and AI assistant.</b> Concedes a human still builds every pipeline.</li>
+      <li><b>Human-in-the-loop by design.</b> The competitors' phrase, and it undercuts autonomy.</li>
+      <li><b>10x faster, automate the toil.</b> Everyone says it, so it says nothing.</li>
+      <li><b>Another platform to adopt.</b> Reads as lock-in to a buyer who already runs Snowflake or Databricks.</li>
+    </ul></div>
+    <div class=&quot;panel tl&quot;><span class=&quot;pill p-canopy&quot;>Own, the white space</span><ul class=&quot;clean&quot; style=&quot;margin-top:10px&quot;>
+      <li><b>Autonomous execution, not assistance.</b> Ships the engineer, not a copilot.</li>
+      <li><b>Runs inside your data plane.</b> The data never leaves.</li>
+      <li><b>Capacity without headcount.</b> A P&amp;L outcome, not a feature.</li>
+      <li><b>A career win for the data leader.</b> The buyer identity nobody speaks to.</li>
+      <li><b>Neutral across your stack.</b> Works with what you run, not against it.</li>
+    </ul></div>
+  </div>
+  <div class=&quot;callout&quot;><div class=&quot;k&quot;>// the test</div><p><b>If a competitor could say the same thing and it would still be true, it is not positioning. It is table stakes.</b> Each pillar below is chosen because the competitor set structurally cannot claim it.</p></div>
+</div></section>
+
+<section class=&quot;sec&quot;><div class=&quot;container&quot;>
+  <div class=&quot;sk&quot;>The messaging pillars</div>
+  <h2>Five things only Genesis can <span class=&quot;bl&quot;>say</span></h2>
+  <p class=&quot;intro&quot;>Each pillar owns a white-space gap, carries the proof it already has, and flags the proof still to build. Hooks are directional angles, not finished copy.</p>
+  <div class=&quot;cols2&quot;>
+    <div class=&quot;panel tl&quot;><span class=&quot;pill p-canopy&quot;>Pillar 1 &amp;middot; autonomous</span><h4>Ships the engineer, not a copilot</h4><p>Owns the &quot;everyone ships a copilot, nobody ships the engineer&quot; gap. Resonates with the champion who is tired of assistants that still leave them building.</p><p style=&quot;font-size:12.5px;color:var(--muted)&quot;><b style=&quot;color:var(--moss-text)&quot;>Proof:</b> months to hours at GXS Bank and Globe Telecom, 3 to 5x output. <b style=&quot;color:var(--canopy-text)&quot;>Hook:</b> &quot;Your copilot still leaves you building every pipeline.&quot;</p></div>
+    <div class=&quot;panel tb&quot;><span class=&quot;pill p-blue&quot;>Pillar 2 &amp;middot; in-plane</span><h4>Runs inside your data plane</h4><p>Owns the trust and security gap. Resonates with the security buyer who gates deals on data egress, and the platform team who does not want data leaving.</p><p style=&quot;font-size:12.5px;color:var(--muted)&quot;><b style=&quot;color:var(--moss-text)&quot;>Proof:</b> Snowflake Native App on Snowpark Container Services, runs inside Databricks and the VPC. <b style=&quot;color:var(--canopy-text)&quot;>Hook:</b> &quot;Every new data tool is another place your data leaves.&quot;</p></div>
+    <div class=&quot;panel tc&quot;><span class=&quot;pill p-clay&quot;>Pillar 3 &amp;middot; capacity</span><h4>Capacity without headcount</h4><p>Owns the economic gap. Resonates with the economic buyer who owns the headcount plan and the budget.</p><p style=&quot;font-size:12.5px;color:var(--muted)&quot;><b style=&quot;color:var(--moss-text)&quot;>Proof:</b> $300K to $450K hiring avoided at GrowthZone, chosen over a $400K hire, roughly $200K a year in headcount avoided. <b style=&quot;color:var(--canopy-text)&quot;>Hook:</b> &quot;You are not short on tools, you are short on people.&quot;</p></div>
+    <div class=&quot;panel tm&quot;><span class=&quot;pill p-moss&quot;>Pillar 4 &amp;middot; career</span><h4>A win for the data leader</h4><p>Owns the buyer-identity gap. Resonates with the champion who wants a career win for shipping something bold, not just a tool that works.</p><p style=&quot;font-size:12.5px;color:var(--muted)&quot;><b style=&quot;color:var(--clay-text)&quot;>Proof to build:</b> a champion testimonial or story. <b style=&quot;color:var(--canopy-text)&quot;>Hook:</b> &quot;Be the leader who cleared the backlog without a hiring plan.&quot;</p></div>
+  </div>
+  <div class=&quot;panel tp&quot; style=&quot;margin-top:16px&quot;><span class=&quot;pill p-pink&quot;>Pillar 5 &amp;middot; neutrality</span><h4>Neutral across your stack</h4><p>Owns the neutrality gap. Resonates with the buyer wary of one more platform lock-in. <b style=&quot;color:var(--moss-text)&quot;>Proof:</b> validated partner of both Snowflake and Databricks. <b style=&quot;color:var(--canopy-text)&quot;>Hook:</b> &quot;Works with the stack you already run, not another platform to migrate to.&quot;</p></div>
+</div></section>
+
+<section class=&quot;sec&quot;><div class=&quot;container&quot;>
+  <div class=&quot;sk&quot;>Persona message map</div>
+  <h2>The right message, to the right <em>buyer</em>, at the right <span class=&quot;bl&quot;>stage</span></h2>
+  <p class=&quot;intro&quot;>Four roles decide inside each account, and each hears a different message at each stage. The pillar tag keeps every ad anchored to a position Genesis can own.</p>
+  <div class=&quot;mmap&quot;>
+    <div class=&quot;mh&quot;></div><div class=&quot;mh&quot;>Unaware, cold</div><div class=&quot;mh&quot;>Aware, warm</div><div class=&quot;mh&quot;>Engaged, convert</div>
+    <div class=&quot;mp&quot;>Economic buyer</div>
+    <div class=&quot;mc&quot;>You are not short on tools, you are short on people.<span class=&quot;pl&quot;>Pillar 3 &amp;middot; capacity</span></div>
+    <div class=&quot;mc&quot;>Add capacity without adding headcount. Here is the dollar math.<span class=&quot;pl&quot;>Pillar 3 &amp;middot; capacity</span></div>
+    <div class=&quot;mc&quot;>Model the headcount you would avoid on one backlog. Book the assessment.<span class=&quot;pl&quot;>Pillar 3 &amp;middot; capacity</span></div>
+    <div class=&quot;mp&quot;>Champion</div>
+    <div class=&quot;mc&quot;>Your copilot still leaves you building every pipeline.<span class=&quot;pl&quot;>Pillar 1 &amp;middot; autonomous</span></div>
+    <div class=&quot;mc&quot;>Months to hours, proven at GXS and Globe. Autonomous, not assisted.<span class=&quot;pl&quot;>Pillar 1 &amp;middot; autonomous</span></div>
+    <div class=&quot;mc&quot;>Run one pipeline with us and watch it execute end to end.<span class=&quot;pl&quot;>Pillars 1 and 4</span></div>
+    <div class=&quot;mp&quot;>Users</div>
+    <div class=&quot;mc&quot;>Automation that clears your backlog is leverage, not a threat.<span class=&quot;pl&quot;>Pillar 1 &amp;middot; autonomous</span></div>
+    <div class=&quot;mc&quot;>Runs inside your environment, on your stack, augmenting your team.<span class=&quot;pl&quot;>Pillar 2 &amp;middot; in-plane</span></div>
+    <div class=&quot;mc&quot;>See the in-plane architecture and how it fits your tools.<span class=&quot;pl&quot;>Pillar 2 &amp;middot; in-plane</span></div>
+    <div class=&quot;mp&quot;>Security</div>
+    <div class=&quot;mc&quot;>Every new data tool is another place your data leaves.<span class=&quot;pl&quot;>Pillar 2 &amp;middot; in-plane</span></div>
+    <div class=&quot;mc&quot;>Runs as a Snowflake Native App. The data never leaves your plane.<span class=&quot;pl&quot;>Pillar 2 &amp;middot; in-plane</span></div>
+    <div class=&quot;mc&quot;>Review the compliance and data-residency brief.<span class=&quot;pl&quot;>Pillar 2 &amp;middot; in-plane</span></div>
+  </div>
+  <p class=&quot;note&quot;>Directional angles, not finished copy. This is the reference the creative team builds against.</p>
+</div></section>
+
+<section class=&quot;sec&quot;><div class=&quot;container&quot;>
+  <div class=&quot;sk&quot;>Funnel-stage message map</div>
+  <h2>Attention, then <span class=&quot;bl&quot;>trust</span>, then the ask</h2>
+  <div class=&quot;cols3&quot;>
+    <div class=&quot;panel tt&quot;><span class=&quot;pill p-terra&quot;>Cold, get attention</span><h4>Problem-framing</h4><p>A pattern interrupt that names the gap: &quot;Everyone ships a copilot. Nobody ships the engineer.&quot; No case studies, no demo ask. Formats: video, Thought Leader Ads, single image.</p></div>
+    <div class=&quot;panel tb&quot;><span class=&quot;pill p-blue&quot;>Warm, build trust</span><h4>Proof-first</h4><p>Vertical-matched case studies, the in-plane architecture, and expert validation over 90 days. This is where relevance decides everything. Formats: document ads, case-study images, video testimonials.</p></div>
+    <div class=&quot;panel tm&quot;><span class=&quot;pill p-moss&quot;>High-intent, make the ask</span><h4>One clear offer</h4><p>The Data Capacity Assessment, low friction, to the accounts that consumed the trust layer. Formats: lead generation forms, conversation ads, a vertical landing page.</p></div>
+  </div>
+</div></section>
+
+<section class=&quot;sec&quot;><div class=&quot;container&quot;>
+  <div class=&quot;sk&quot;>Offer architecture</div>
+  <h2>The primary offer, and the <span class=&quot;bl&quot;>ask</span> per role</h2>
+  <div class=&quot;dark-panel&quot; style=&quot;margin-bottom:16px&quot;>
+    <div class=&quot;k&quot;>// the primary conversion offer</div>
+    <p style=&quot;font-size:16px;line-height:1.5;margin:0 0 6px&quot;><b style=&quot;color:#D4FF3D&quot;>The Data Capacity Assessment.</b> A scoped read of one real backlog that models the headcount Genesis would let them avoid and the pipelines it would execute. Worth paying for, which is why an engaged account will trade four form fields for it.</p>
+  </div>
+  <div class=&quot;cols3&quot;>
+    <div class=&quot;panel tc&quot;><span class=&quot;pill p-clay&quot;>Economic buyer</span><p>The capacity and dollar-math assessment. The ask that speaks to the P&amp;L: what one backlog costs in hires versus in Genesis.</p></div>
+    <div class=&quot;panel tl&quot;><span class=&quot;pill p-canopy&quot;>Champion</span><p>Run one pipeline. A hands-on proof that executes end to end, so the champion can bring a visible win forward.</p></div>
+    <div class=&quot;panel tb&quot;><span class=&quot;pill p-blue&quot;>Security</span><p>The compliance and data-residency brief. Removes the objection that ends deals, on the security buyer's terms.</p></div>
+  </div>
+  <p class=&quot;note&quot;>Every lead form stays at four fields or fewer. Cold audiences get no ask, only the content that earns attention and trust first.</p>
+</div></section>
+
+<section class=&quot;sec&quot;><div class=&quot;container&quot;>
+  <div class=&quot;sk&quot;>Search intent to message match</div>
+  <h2>The query is the <em>brief</em></h2>
+  <p class=&quot;intro&quot;>When paid search runs, the landing message is matched to the exact intent behind the query, and each maps to a pillar.</p>
+  <div>
+    <div class=&quot;smatch&quot;><div class=&quot;q&quot;>data engineering without hiring</div><div class=&quot;m&quot;>Capacity-without-headcount page with the dollar math.<span class=&quot;pl&quot;>Pillar 3</span></div></div>
+    <div class=&quot;smatch&quot;><div class=&quot;q&quot;>Snowflake pipeline automation</div><div class=&quot;m&quot;>The in-plane Snowflake Native App story, data never leaves.<span class=&quot;pl&quot;>Pillar 2</span></div></div>
+    <div class=&quot;smatch&quot;><div class=&quot;q&quot;>Databricks migration automation</div><div class=&quot;m&quot;>Autonomous migration that executes, not a copilot that assists.<span class=&quot;pl&quot;>Pillar 1</span></div></div>
+    <div class=&quot;smatch&quot;><div class=&quot;q&quot;>Ascend.io alternative</div><div class=&quot;m&quot;>Conquest: autonomous execution versus a platform your team still operates.<span class=&quot;pl&quot;>Pillars 1 and 5</span></div></div>
+    <div class=&quot;smatch&quot;><div class=&quot;q&quot;>reduce data engineering costs</div><div class=&quot;m&quot;>The headcount-avoided model, capacity as a P&amp;L line.<span class=&quot;pl&quot;>Pillar 3</span></div></div>
+  </div>
+</div></section>
+
+<section class=&quot;sec&quot;><div class=&quot;container&quot;>
+  <div class=&quot;sk&quot;>Proof asset inventory</div>
+  <h2>The proof you have, and the proof to <span class=&quot;cl&quot;>build</span></h2>
+  <p class=&quot;intro&quot;>The relevance problem, stated plainly: a hedge-fund story does not persuade a bank. The warm layer needs vertical-matched proof, and here is what exists versus what to produce, framed as the content the engine will create.</p>
+  <div class=&quot;ptwrap&quot;><table class=&quot;ptable&quot;>
+    <thead><tr><th>Asset</th><th>Status</th><th>Pillar</th><th>Stage</th></tr></thead>
+    <tbody>
+      <tr><td><b>GXS Bank and Globe Telecom, months to hours</b></td><td><span class=&quot;have&quot;>Have</span></td><td>1 autonomous</td><td>Warm</td></tr>
+      <tr><td><b>Hedge-fund case study</b>, the current thought-leader ad</td><td><span class=&quot;have&quot;>Have</span></td><td>3 capacity</td><td>Warm, finance only</td></tr>
+      <tr><td><b>Headcount-avoided ROI data points</b> (GrowthZone, others)</td><td><span class=&quot;have&quot;>Have</span></td><td>3 capacity</td><td>High-intent</td></tr>
+      <tr><td><b>Banking and financial-services case study</b>, anonymized</td><td><span class=&quot;tobuild&quot;>To build</span></td><td>3 capacity</td><td>Warm</td></tr>
+      <tr><td><b>In-plane architecture brief</b>, Snowflake Native App</td><td><span class=&quot;tobuild&quot;>To build</span></td><td>2 in-plane</td><td>High-intent</td></tr>
+      <tr><td><b>Compliance and data-residency brief</b></td><td><span class=&quot;tobuild&quot;>To build</span></td><td>2 in-plane</td><td>High-intent</td></tr>
+      <tr><td><b>Champion career story or testimonial</b></td><td><span class=&quot;tobuild&quot;>To build</span></td><td>4 career</td><td>Warm</td></tr>
+    </tbody>
+  </table></div>
+  <div class=&quot;callout&quot;><div class=&quot;k&quot;>// the read</div><p><b>The to-build list is exactly what the content engine produces.</b> Monthly interviews with your experts, mapped to the pillars and the verticals your named list lives in, so the warm layer finally has the bank story, the architecture brief, and the champion voice it needs.</p></div>
+</div></section>
+
+</body>
+</html>"></iframe>
   <iframe class="frame" id="f-ecosystem" title="Ecosystem" srcdoc="<!DOCTYPE html>
 <html lang=&quot;en&quot; data-theme=&quot;light&quot;>
 <head>
@@ -2288,38 +2647,18 @@ ul.clean li b{color:var(--ink)}
 </html>"></iframe>
 </div>
 <script>
-var FR={"overview":"f-overview","whitespace":"f-whitespace","targeting":"f-targeting","ecosystem":"f-ecosystem","howitworks":"f-howitworks","build":"f-build","paths":"f-paths"};
-
+var FR={"overview":"f-overview","whitespace":"f-whitespace","targeting":"f-targeting","messaging":"f-messaging","ecosystem":"f-ecosystem","howitworks":"f-howitworks","build":"f-build","paths":"f-paths"};
 var DEFAULT='overview';
 function curTheme(){return document.documentElement.getAttribute('data-theme')==='dark'?'dark':'light';}
-function styleFrame(f){
-  try{
-    var d=f.contentDocument; if(!d) return;
-    d.documentElement.setAttribute('data-theme',curTheme());
-    if(!d.getElementById('__roominj')){
-      var s=d.createElement('style'); s.id='__roominj';
-      s.textContent='.nav,.top,#themeBtn,#themeToggle,.tgl{display:none!important}';
-      (d.head||d.documentElement).appendChild(s);
-    }
-  }catch(e){}
-}
-function applyTheme(t){
-  document.documentElement.setAttribute('data-theme',t);
-  try{localStorage.setItem('imp_theme',t);}catch(e){}
-  document.querySelectorAll('iframe.frame').forEach(function(f){try{f.contentDocument.documentElement.setAttribute('data-theme',t);}catch(e){}});
-  var tb=document.getElementById('themeToggle');if(tb)tb.textContent=t==='dark'?'Light':'Dark';
-}
+function styleFrame(f){try{var d=f.contentDocument;if(!d)return;d.documentElement.setAttribute('data-theme',curTheme());if(!d.getElementById('__roominj')){var s=d.createElement('style');s.id='__roominj';s.textContent='.nav,.top,#themeBtn,#themeToggle,.tgl{display:none!important}';(d.head||d.documentElement).appendChild(s);}}catch(e){}}
+function applyTheme(t){document.documentElement.setAttribute('data-theme',t);try{localStorage.setItem('imp_theme',t);}catch(e){}document.querySelectorAll('iframe.frame').forEach(function(f){try{f.contentDocument.documentElement.setAttribute('data-theme',t);}catch(e){}});var tb=document.getElementById('themeToggle');if(tb)tb.textContent=t==='dark'?'Light':'Dark';}
 function key(){var h=location.hash.slice(1);return FR[h]?h:DEFAULT;}
-function show(k){
-  document.querySelectorAll('.tab').forEach(function(t){t.classList.toggle('active',t.dataset.k===k);});
-  document.querySelectorAll('iframe.frame').forEach(function(f){f.classList.toggle('active',f.id===FR[k]);});
-}
+function show(k){document.querySelectorAll('.tab').forEach(function(t){t.classList.toggle('active',t.dataset.k===k);});document.querySelectorAll('iframe.frame').forEach(function(f){f.classList.toggle('active',f.id===FR[k]);});}
 document.querySelectorAll('.tab').forEach(function(t){t.addEventListener('click',function(){location.hash=t.dataset.k;});});
 window.addEventListener('hashchange',function(){show(key());});
 document.getElementById('themeToggle').addEventListener('click',function(){applyTheme(curTheme()==='dark'?'light':'dark');});
 document.querySelectorAll('iframe.frame').forEach(function(f){f.addEventListener('load',function(){styleFrame(f);});});
-applyTheme(curTheme());
-show(key());
+applyTheme(curTheme());show(key());
 </script>
 </body>
 </html>

@@ -45,6 +45,7 @@ iframe.frame.active{display:block}
     <button class="tab" data-k="howitworks">How It Works</button>
     <button class="tab" data-k="build">Campaign Build</button>
     <button class="tab" data-k="paths">Paths Forward</button>
+    <button class="tab" data-k="budget">Budget</button>
   </div>
   <div class="right">
     <a class="book" href="https://landbot.online/v3/H-2201411-ZNNL8EM9RF7C2XAC/index.html" target="_blank" rel="noopener">Book a call</a>
@@ -2645,12 +2646,419 @@ ul.clean li b{color:var(--ink)}
 
 </body>
 </html>"></iframe>
+  <iframe class="frame" id="f-budget" title="Budget" srcdoc="<!DOCTYPE html>
+<html lang=&quot;en&quot; data-theme=&quot;light&quot;>
+<head>
+<meta charset=&quot;UTF-8&quot;>
+<meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+<title>Genesis Computing &amp;middot; The Demand Engine &amp;middot; Impactable</title>
+<meta name=&quot;robots&quot; content=&quot;noindex, nofollow&quot;>
+<link href=&quot;https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Inter:wght@400;500;600;700;800;900&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,600&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
+<style>
+:root{
+  --navy:#0D2D5E;--navy-deep:#071A38;--blue:#1B9BD1;--blue-soft:#5BB8E0;
+  --canopy:#D4FF3D;--moss:#7BAA3E;--terracotta:#C4521F;--terra-soft:#E0703A;--hazard:#FF5A1F;--clay:#FFB627;--pink:#FF2D7A;
+  --asphalt:#F4F1EA;--concrete:#FFFFFF;--court:#ECE8DD;--bone:#17171B;--chalk:#46464E;--muted:#6E6A5F;--line:#DED9CC;
+  --canopy-text:#526600;--blue-text:#0f6a92;--moss-text:#3d6318;--clay-text:#8a5e00;--terra-text:#9c3d13;--pink-text:#c01458;
+}
+[data-theme=&quot;dark&quot;]{
+  --asphalt:#0A0A0C;--concrete:#15151A;--court:#22222A;--bone:#F4F1EA;--chalk:#D8D4C8;--muted:#8f8c7f;--line:#26262f;
+  --canopy-text:#D4FF3D;--blue-text:#5BB8E0;--moss-text:#7BAA3E;--clay-text:#FFB627;--terra-text:#E0703A;--pink-text:#FF2D7A;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{font-family:'Inter',sans-serif;background:var(--asphalt);color:var(--bone);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(244,241,234,.03) 1px,transparent 0);background-size:5px 5px;pointer-events:none;z-index:1}
+.mono{font-family:'JetBrains Mono',monospace}
+/* progress + chrome */
+.progress{position:fixed;top:0;left:0;height:3px;width:100%;background:rgba(255,255,255,.06);z-index:60}
+.progress i{display:block;height:100%;width:0;background:var(--canopy);transition:width .35s}
+.brandbar{position:fixed;top:16px;left:26px;z-index:60;font-family:Arial;font-weight:900;font-size:15px;letter-spacing:-.5px}
+.brandbar .able{color:var(--blue-text)} .brandbar .sep{color:var(--muted);font-family:'JetBrains Mono';font-size:10px;font-weight:400;margin-left:8px;letter-spacing:.14em}
+.navbar{position:fixed;bottom:16px;right:26px;z-index:60;display:flex;align-items:center;gap:10px}
+.navbar .count{font-family:'JetBrains Mono';font-size:12px;color:var(--muted);letter-spacing:.1em;min-width:56px;text-align:center}
+.nbtn{width:40px;height:40px;border-radius:9px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--chalk);font-size:17px;cursor:pointer;transition:.15s}
+.nbtn:hover{border-color:var(--canopy-text);color:var(--canopy-text)}
+.hint{position:fixed;bottom:22px;left:26px;z-index:60;font-family:'JetBrains Mono';font-size:10.5px;color:var(--muted);letter-spacing:.06em}
+/* slides */
+.deck{position:relative;z-index:2}
+.slide{display:none;min-height:100vh;padding:74px 6vw 92px;box-sizing:border-box}
+.slide.active{display:flex;flex-direction:column;justify-content:center;overflow-y:auto;animation:fade .45s ease}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.wrap{width:100%;max-width:1200px;margin:0 auto}
+.kick{font-family:'JetBrains Mono';font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--pink-text);margin-bottom:14px;display:flex;gap:14px;align-items:center}
+.kick .sn{color:var(--muted)}
+.stitle{font-family:'Archivo Black';font-size:clamp(28px,4.4vw,52px);line-height:1.0;letter-spacing:-.02em;text-transform:uppercase;margin-bottom:8px}
+.stitle em{font-style:italic;color:var(--canopy-text)}
+.stitle .bl{color:var(--blue-text)} .stitle .te{color:var(--terra-text)} .stitle .cl{color:var(--clay-text)} .stitle .ms{color:var(--moss-text)} .stitle .pk{color:var(--pink-text)}
+.slede{font-size:clamp(15px,1.5vw,18px);color:var(--chalk);max-width:900px;margin:12px 0 6px}
+.slede strong{color:var(--bone)}
+.note{font-family:'JetBrains Mono';font-size:11.5px;color:var(--muted);letter-spacing:.02em;line-height:1.6;margin-top:14px}
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+.cols4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:20px}
+.panel{background:var(--concrete);border:1px solid var(--line);border-radius:14px;padding:22px 24px}
+.panel.tl{border-top:3px solid var(--canopy)} .panel.tb{border-top:3px solid var(--blue)} .panel.tt{border-top:3px solid var(--terracotta)} .panel.tc{border-top:3px solid var(--clay)} .panel.tm{border-top:3px solid var(--moss)} .panel.tp{border-top:3px solid var(--pink)}
+.panel h4{font-family:'Archivo Black';font-size:15px;text-transform:uppercase;letter-spacing:-.01em;margin-bottom:8px}
+.panel p{font-size:14px;color:var(--chalk)}
+.panel .lab{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+ul.clean{list-style:none;margin-top:4px} ul.clean li{font-size:13.5px;color:var(--chalk);padding:5px 0 5px 18px;position:relative}
+ul.clean li::before{content:'\25B8';position:absolute;left:0;color:var(--canopy-text)}
+ul.clean li b{color:var(--bone)}
+.pill{display:inline-block;font-family:'JetBrains Mono';font-size:11px;letter-spacing:.05em;text-transform:uppercase;font-weight:700;padding:4px 11px;border-radius:20px}
+.p-canopy{background:var(--canopy);color:#0A0A0C} .p-blue{background:var(--blue);color:#04121f} .p-pink{background:var(--pink);color:#fff} .p-moss{background:var(--moss);color:#0A0A0C} .p-clay{background:var(--clay);color:#0A0A0C} .p-terra{background:var(--terracotta);color:#fff}
+.kpi{background:var(--concrete);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.kpi .n{font-family:'Archivo Black';font-size:30px;line-height:1;color:var(--canopy-text)}
+.kpi.b .n{color:var(--blue-text)} .kpi.p .n{color:var(--pink-text)} .kpi.m .n{color:var(--moss-text)} .kpi.t .n{color:var(--terra-text)}
+.kpi .l{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.45}
+figure{margin:20px 0 0}
+figcaption{font-family:'JetBrains Mono';font-size:11px;color:var(--muted);letter-spacing:.02em;line-height:1.6;margin-top:12px}
+.svgwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+svg{width:100%;height:auto;display:block}
+@media(max-width:720px){.svgwrap svg{min-width:660px}.cols2,.cols3,.cols4{grid-template-columns:1fr}.slide{padding:70px 20px 92px}}
+/* callout */
+.callout{border:1px solid var(--line);border-left:3px solid var(--pink);border-radius:12px;padding:16px 20px;margin-top:18px;background:rgba(255,45,122,.05)}
+.callout .k{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--pink-text);margin-bottom:6px}
+.callout p{font-size:14px;color:var(--chalk)} .callout p b{color:var(--bone)}
+.callout.cn{border-left-color:var(--canopy-text);background:rgba(212,255,61,.05)} .callout.cn .k{color:var(--canopy-text)}
+/* heat map */
+.heat{display:grid;grid-template-columns:170px repeat(4,1fr);gap:6px;margin-top:20px;max-width:820px}
+.heat .hh{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);padding:6px 4px;text-align:center}
+.heat .hr{font-family:'JetBrains Mono';font-size:12px;color:var(--chalk);display:flex;align-items:center;padding-left:4px}
+.heat .hc{height:42px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono';font-size:11px;font-weight:700;color:#0A0A0C}
+.h0{background:rgba(212,255,61,.08);color:var(--muted)} .h1{background:rgba(212,255,61,.28)} .h2{background:rgba(212,255,61,.5)} .h3{background:rgba(212,255,61,.72)} .h4{background:var(--canopy)}
+.heatleg{display:flex;gap:14px;align-items:center;margin-top:14px;flex-wrap:wrap;font-family:'JetBrains Mono';font-size:11px;color:var(--muted)}
+.heatleg span{display:inline-flex;align-items:center;gap:6px}.heatleg i{width:16px;height:16px;border-radius:4px;display:inline-block}
+/* funnel bands */
+.fbands{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:22px}
+.fb{border-radius:12px;padding:16px 22px;width:100%}
+.fb .fs{font-family:'Archivo Black';font-size:15px;text-transform:uppercase;color:#0A0A0C}
+.fb .fp{font-size:13px;color:#0A0A0C;margin-top:3px;font-weight:600}
+.fbt{background:var(--terra-soft)} .fbm{background:var(--blue-soft);width:78%} .fbb{background:var(--canopy);width:56%}
+/* gantt */
+.gantt{margin-top:20px}
+.gh{display:grid;grid-template-columns:220px repeat(3,1fr);gap:0;border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:8px}
+.gh div{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:center}
+.gh div:first-child{text-align:left}
+.grow{display:grid;grid-template-columns:220px 1fr;gap:0;align-items:center;margin:7px 0}
+.grow .gl{font-size:13px;color:var(--chalk);padding-right:12px}
+.gtrack{position:relative;height:26px;background:rgba(255,255,255,.03);border-radius:6px}
+.gbar{position:absolute;top:3px;height:20px;border-radius:5px;display:flex;align-items:center;padding:0 10px;font-family:'JetBrains Mono';font-size:10px;font-weight:700;color:#0A0A0C;white-space:nowrap;overflow:hidden}
+.gmark{position:absolute;top:-2px;bottom:-2px;width:0;border-left:2px dashed rgba(255,45,122,.6)}
+/* we/you/together */
+.we h4{display:flex;align-items:center;gap:10px}
+/* steps */
+.stepn{font-family:'Archivo Black';font-size:22px;color:var(--pink-text);line-height:1}
+/* title slide */
+.title-hero{max-width:1000px}
+.title-hero .ey{font-family:'JetBrains Mono';font-size:13px;letter-spacing:.28em;text-transform:uppercase;color:var(--canopy-text);margin-bottom:22px}
+.title-hero h1{font-family:'Archivo Black';font-size:clamp(38px,6.2vw,78px);line-height:.96;letter-spacing:-.02em;text-transform:uppercase}
+.title-hero h1 em{font-style:italic;color:var(--canopy-text)}
+.title-hero .sub{font-size:clamp(16px,1.8vw,21px);color:var(--chalk);margin-top:22px;max-width:760px}
+.title-hero .meta{font-family:'JetBrains Mono';font-size:12px;color:var(--muted);letter-spacing:.08em;margin-top:34px}
+.btn{display:inline-block;font-family:'JetBrains Mono';font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;padding:15px 26px;border-radius:9px;text-decoration:none;background:var(--canopy);color:#0A0A0C;margin-top:24px}
+
+/* light/dark pairings */
+body::before{background-image:radial-gradient(circle at 1px 1px,rgba(0,0,0,.032) 1px,transparent 0)}
+[data-theme=&quot;dark&quot;] body::before{background-image:radial-gradient(circle at 1px 1px,rgba(244,241,234,.03) 1px,transparent 0)}
+.progress{background:rgba(0,0,0,.08)}
+[data-theme=&quot;dark&quot;] .progress{background:rgba(255,255,255,.06)}
+.nbtn{background:rgba(0,0,0,.03)}
+[data-theme=&quot;dark&quot;] .nbtn{background:rgba(255,255,255,.03)}
+.gtrack{background:rgba(0,0,0,.05)}
+[data-theme=&quot;dark&quot;] .gtrack{background:rgba(255,255,255,.03)}
+.callout{background:rgba(255,45,122,.07)}
+[data-theme=&quot;dark&quot;] .callout{background:rgba(255,45,122,.05)}
+.callout.cn{background:rgba(212,255,61,.10)}
+[data-theme=&quot;dark&quot;] .callout.cn{background:rgba(212,255,61,.05)}
+[data-theme=&quot;light&quot;] .svgwrap{background:#0d0d10;border:1px solid #24242c;border-radius:12px;padding:16px 18px 8px}
+
+/* budget deck additions */
+.btable{width:100%;border-collapse:separate;border-spacing:0;font-size:13.5px;margin-top:6px}
+.btable th,.btable td{padding:9px 13px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.btable thead th{font-family:'Archivo Black';font-size:14px;color:var(--bone)}
+.btable thead th .sub{font-family:'Inter';font-weight:600;font-size:11px;color:var(--muted);display:block;margin-top:2px}
+.btable .rl{font-family:'JetBrains Mono';font-size:11.5px;color:var(--chalk)}
+.btable .sec td{font-family:'JetBrains Mono';font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);background:var(--court)}
+.btable .num{font-family:'JetBrains Mono';color:var(--bone);font-weight:700}
+.btable .tot td{font-family:'Archivo Black';font-size:14px;color:var(--canopy-text);border-top:2px solid var(--line)}
+.btable td.rec{background:rgba(0,0,0,.04)}
+[data-theme=&quot;dark&quot;] .btable td.rec{background:rgba(212,255,61,.06)}
+.btable th.rechead{background:#071A38}
+.btable th.rechead,.btable th.rechead *{color:#F4F1EA}
+.recpill{display:inline-block;font-family:'JetBrains Mono';font-size:9px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;background:#D4FF3D;color:#0A0A0C;padding:3px 7px;border-radius:5px;margin-bottom:6px}
+.stage{display:flex;flex-direction:column;gap:9px;margin-top:8px}
+.stagerow{display:grid;grid-template-columns:150px 1fr;gap:14px;align-items:stretch}
+.stagelbl{font-family:'JetBrains Mono';font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);display:flex;align-items:center}
+.stagebar{border-radius:8px;padding:12px 15px;color:#0A0A0C;font-size:13px;line-height:1.4}
+.sb-tof{background:#E0703A} .sb-mof{background:#5BB8E0} .sb-bof{background:#7BAA3E}
+.stagebar b{display:block;font-family:'Archivo Black';font-size:12.5px;margin-bottom:3px;color:#0A0A0C}
+.ramp{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px}
+@media(max-width:760px){.ramp{grid-template-columns:1fr}}
+.rcard{background:var(--concrete);border:1px solid var(--line);border-radius:12px;padding:14px 16px;border-top:3px solid var(--blue-soft)}
+.rcard .rm{font-family:'JetBrains Mono';font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.rcard .rv{font-family:'Archivo Black';font-size:19px;color:var(--bone);margin:5px 0 2px}
+.rcard .rv2{font-family:'JetBrains Mono';font-size:12px;color:var(--canopy-text);font-weight:700}
+.rcard .rn{font-size:11.5px;color:var(--chalk);margin-top:5px;line-height:1.35}
+
+.fbar{display:flex;height:56px;border-radius:10px;overflow:hidden;margin:16px 0 6px;border:1px solid var(--line)}
+.fbar>div{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;color:#0A0A0C;font-family:'JetBrains Mono';font-weight:700}
+.fbar .lbl{font-size:12px}.fbar .pct{font-size:10.5px;opacity:.85}
+.fbar .ft{background:#E0703A}.fbar .fm{background:#5BB8E0}.fbar .fb{background:#7BAA3E}
+.btable .rl .d{display:block;font-size:9.5px;color:var(--muted);font-family:'JetBrains Mono';margin-top:2px}
+.btable th,.btable td{padding:7px 13px}
+.flow{display:flex;align-items:stretch;gap:0;margin-top:14px}
+.fstage{flex:1;background:var(--concrete);border:1px solid var(--line);border-radius:12px;padding:12px 12px 10px}
+.fstage.tof{border-top:3px solid #E0703A}.fstage.mof{border-top:3px solid #5BB8E0}.fstage.bof{border-top:3px solid #7BAA3E}
+.fstage .sh{font-family:'JetBrains Mono';font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-bottom:9px}
+.fstage .sh b{color:var(--bone);display:block;font-family:'Archivo Black';font-size:13px;letter-spacing:0;text-transform:none;margin-top:1px}
+.cbox{background:var(--court);border:1px solid var(--line);border-radius:9px;padding:9px 11px;margin-bottom:8px}
+.cbox:last-child{margin-bottom:0}
+.ctag{font-family:'JetBrains Mono';font-size:9px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:2px 7px;border-radius:4px;display:inline-block;margin-bottom:5px}
+.ch-li{background:#5BB8E0;color:#0A0A0C}.ch-me{background:#FFB627;color:#0A0A0C}.ch-go{background:#E0703A;color:#0A0A0C}
+.cbox .cn{font-family:'Inter';font-weight:700;font-size:12.5px;color:var(--bone);line-height:1.25}
+.cbox .cd{font-size:10.5px;color:var(--muted);margin-top:2px;line-height:1.3}
+.cbox .cb{font-family:'JetBrains Mono';font-weight:700;font-size:12px;color:var(--canopy-text);margin-top:5px}
+.farrow{display:flex;align-items:center;justify-content:center;padding:0 7px;color:var(--muted);font-size:24px;flex:none}
+.feeder{margin-top:12px;background:var(--concrete);border:1px solid var(--line);border-left:3px solid #E0703A;border-radius:12px;padding:12px 15px;display:flex;align-items:center;gap:14px}
+.feeder .ft{font-size:13px;color:var(--chalk);line-height:1.45}
+.feeder .ft b{color:var(--bone)}
+</style>
+<script>(function(){try{var t=localStorage.getItem('imp_theme');document.documentElement.setAttribute('data-theme',t==='dark'?'dark':'light');}catch(e){}})();</script>
+<style>
+.termchip{display:inline-block;font-family:'JetBrains Mono';font-size:12px;background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--chalk);padding:5px 11px;border-radius:6px;margin:4px 6px 4px 0}
+.mmap{display:grid;grid-template-columns:150px 1fr 1fr 1fr;gap:8px;margin-top:20px}
+.mmap .mh{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:4px 8px}
+.mmap .mp{font-family:'JetBrains Mono';font-size:12px;color:var(--bone);display:flex;align-items:center;padding:0 6px;font-weight:700}
+.mmap .mc{background:var(--concrete);border:1px solid var(--line);border-radius:8px;padding:11px 13px;font-size:12.5px;color:var(--chalk);line-height:1.4}
+.mmap .mc .pl{display:block;margin-top:7px;font-family:'JetBrains Mono';font-size:9.5px;color:var(--canopy-text);letter-spacing:.04em;text-transform:uppercase}
+.rt{margin-top:18px}
+.rthead,.rtrow{display:grid;grid-template-columns:1.15fr 1.3fr 1.4fr;gap:14px}
+.rthead{padding-bottom:8px;border-bottom:1px solid var(--line)}
+.rthead div{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.rtrow{padding:13px 0;border-bottom:1px solid var(--line)}
+.rtrow .rk{font-family:'Archivo Black';font-size:12.5px;color:var(--bone);text-transform:uppercase;line-height:1.25}
+.rtrow .rv{font-size:13px;color:var(--chalk);line-height:1.45}
+.rtrow .rv b{color:var(--bone)}
+@media(max-width:720px){.mmap{grid-template-columns:1fr}.mmap .mh{display:none}.mmap .mp{padding-top:12px}.rthead{display:none}.rtrow{grid-template-columns:1fr;gap:5px}}
+</style>
+</head>
+<body>
+<div class=&quot;progress&quot;><i id=&quot;pfill&quot;></i></div>
+<div class=&quot;brandbar&quot;><span>Impact</span><span class=&quot;able&quot;>able</span><span class=&quot;sep&quot;>FOR GENESIS COMPUTING</span></div>
+
+<div class=&quot;deck&quot; id=&quot;deck&quot;>
+
+<section class=&quot;slide&quot;><div class=&quot;wrap&quot;><div class=&quot;title-hero&quot;>
+  <div class=&quot;ey&quot;>Budget presentation &amp;middot; September 11, 2026</div>
+  <h1>The <em>budget</em>, and how it goes to <span class=&quot;bl&quot;>work</span></h1>
+  <p class=&quot;sub&quot;>Not a new strategy. The investment already scoped, explained by channel, by funnel stage, and by how the channels compound. Plus a straight answer to the number that started this call.</p>
+  <div class=&quot;meta&quot;>Impactable &amp;middot; for Genesis Computing &amp;middot; LinkedIn Marketing Partner &amp;middot; CAPI Certified</div>
+</div></div></section>
+<section class=&quot;slide&quot;><div class=&quot;wrap&quot;>
+  <div class=&quot;kick&quot;>First, the number</div>
+  <h2 class=&quot;stitle&quot;>The starting figure was a <em>floor</em>, not a ceiling</h2>
+  <p class=&quot;slede&quot;>The $5,000 to $7,000 LinkedIn figure was a deliberately conservative Month 1 starting point while the audience builds. It is not our recommendation, and it is not a cap. We scale the investment to the opportunity.</p>
+  <div class=&quot;cols3&quot;>
+    <div class=&quot;panel tt&quot;><span class=&quot;pill p-terra&quot;>What it was</span><h4 style=&quot;margin-top:10px&quot;>A Month 1 floor</h4><p>A conservative launch minimum while the retargeting pools are still forming. The smallest sensible starting point, not the target.</p></div>
+    <div class=&quot;panel tb&quot;><span class=&quot;pill p-blue&quot;>What the fee supports</span><h4 style=&quot;margin-top:10px&quot;>Up to $25k, or $40k</h4><p>The flat management fee covers up to $25,000 a month combined across LinkedIn and Meta, and up to about $40,000 a month with Google added. The fee does not change with spend.</p></div>
+    <div class=&quot;panel tl&quot;><span class=&quot;pill p-canopy&quot;>What we recommend</span><h4 style=&quot;margin-top:10px&quot;>Deploy more, sooner</h4><p>Given what you already invest, we would generally recommend deploying more from the start. More budget, deployed well across the right segments, is more pipeline.</p></div>
+  </div>
+  <div class=&quot;callout cn&quot;><div class=&quot;k&quot;>// the real question</div><p><b>Because the fee is flat whether you spend the floor or the ceiling, the question is not &quot;what is the minimum.&quot;</b> It is how much of this account universe you want to own, and how fast.</p></div>
+</div></section>
+<section class=&quot;slide&quot;><div class=&quot;wrap&quot;>
+  <div class=&quot;kick&quot;>The principle</div>
+  <h2 class=&quot;stitle&quot;>One budget, <em>one</em> system</h2>
+  <p class=&quot;slede&quot;>No channel is siloed. Every dollar in one channel makes the next channel cheaper, which is the whole reason to run them together rather than as separate line items.</p>
+  <div class=&quot;cols3&quot;>
+    <div class=&quot;panel tt&quot;><span class=&quot;pill p-terra&quot;>Capture</span><h4 style=&quot;margin-top:10px&quot;>Paid search</h4><p>Brings the in-market buyers who are searching for this right now, on the fastest cycle.</p></div>
+    <div class=&quot;panel tb&quot;><span class=&quot;pill p-blue&quot;>Qualify</span><h4 style=&quot;margin-top:10px&quot;>LinkedIn</h4><p>Sees every visitor those channels produce, filters them firmographically, and retargets over 90 days.</p></div>
+    <div class=&quot;panel tc&quot;><span class=&quot;pill p-clay&quot;>Extend</span><h4 style=&quot;margin-top:10px&quot;>Meta</h4><p>Covers the accounts and people LinkedIn cannot reach, against a pool that is already qualified.</p></div>
+  </div>
+  <div class=&quot;callout cn&quot;><div class=&quot;k&quot;>// the compounding</div><p><b>Google gets efficient because LinkedIn retargets the click. LinkedIn gets efficient because search brings in-market traffic to qualify. Meta gets useful because it finally has a qualified pool to work.</b> Judged alone, each looks like a cost. Judged together, each funds the next.</p></div>
+</div></section>
+<section class=&quot;slide&quot;><div class=&quot;wrap&quot;>
+  <div class=&quot;kick&quot;>Why paid search</div>
+  <h2 class=&quot;stitle&quot;>Paid search is the <span class=&quot;te&quot;>efficiency</span> multiplier</h2>
+  <p class=&quot;slede&quot;>In-market buyers are searching for enterprise data-engineering right now. The problem before was running Google in a silo, on the most expensive keywords, with no way to catch the traffic it paid for.</p>
+  <div class=&quot;cols2&quot;>
+    <div class=&quot;panel tt&quot;><span class=&quot;pill p-terra&quot;>Why it stalled before</span><ul class=&quot;clean&quot; style=&quot;margin-top:10px&quot;><li>Run direct, in a silo, on a premium-priced category.</li><li>The rep quoted $50k a month just to be in the auctions.</li><li>No retargeting pool, so the click bounced and the money was gone.</li></ul></div>
+    <div class=&quot;panel tb&quot;><span class=&quot;pill p-blue&quot;>Why it works now</span><ul class=&quot;clean&quot; style=&quot;margin-top:10px&quot;><li>Roughly $10k pulls real in-market traffic.</li><li>The LinkedIn Insight Tag sees every one of those visitors and qualifies them by company, size, seniority, and function.</li><li>They enter a 90-day retargeting arc and the click you paid for finally converts.</li></ul></div>
+  </div>
+  <div class=&quot;callout cn&quot;><div class=&quot;k&quot;>// the edge</div><p><b>You will not outbid the giants on the click.</b> But once a searcher lands in your pool, a smaller advertiser can dominate their feed for 90 days in a way a giant covering the whole market never can.</p></div>
+</div></section>
+<section class=&quot;slide&quot;><div class=&quot;wrap&quot;>
+  <div class=&quot;kick&quot;>How it connects</div>
+  <h2 class=&quot;stitle&quot;>Search feeds LinkedIn, LinkedIn <span class=&quot;bl&quot;>converts</span></h2>
+  <figure><div class=&quot;svgwrap&quot;><svg viewBox=&quot;0 0 1180 210&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; role=&quot;img&quot; aria-label=&quot;Paid search traffic flows to the site, LinkedIn Insight Tag sees and qualifies all traffic, retargets over 90 days, then converts&quot;>
+  <defs><marker id=&quot;bf&quot; markerWidth=&quot;9&quot; markerHeight=&quot;9&quot; refX=&quot;7&quot; refY=&quot;4.5&quot; orient=&quot;auto&quot;><path d=&quot;M0,0 L9,4.5 L0,9 z&quot; fill=&quot;#8f8c7f&quot;/></marker></defs>
+  <g font-family=&quot;Inter,sans-serif&quot;>
+  <rect x=&quot;8&quot; y=&quot;66&quot; width=&quot;200&quot; height=&quot;86&quot; rx=&quot;12&quot; fill=&quot;#15151A&quot; stroke=&quot;#26262f&quot;/><rect x=&quot;8&quot; y=&quot;66&quot; width=&quot;200&quot; height=&quot;5&quot; rx=&quot;2&quot; fill=&quot;#E0703A&quot;/>
+  <text x=&quot;24&quot; y=&quot;92&quot; font-family=&quot;'JetBrains Mono'&quot; font-size=&quot;10.5&quot; fill=&quot;#E0703A&quot; letter-spacing=&quot;1&quot;>PAID SEARCH</text><text x=&quot;24&quot; y=&quot;114&quot; font-size=&quot;12.5&quot; fill=&quot;#F4F1EA&quot;>In-market intent,</text><text x=&quot;24&quot; y=&quot;132&quot; font-size=&quot;12.5&quot; fill=&quot;#F4F1EA&quot;>the fastest cycle</text>
+  <rect x=&quot;248&quot; y=&quot;66&quot; width=&quot;230&quot; height=&quot;86&quot; rx=&quot;12&quot; fill=&quot;#0D2D5E&quot;/><rect x=&quot;248&quot; y=&quot;66&quot; width=&quot;230&quot; height=&quot;5&quot; rx=&quot;2&quot; fill=&quot;#5BB8E0&quot;/>
+  <text x=&quot;264&quot; y=&quot;92&quot; font-family=&quot;'JetBrains Mono'&quot; font-size=&quot;10.5&quot; fill=&quot;#5BB8E0&quot; letter-spacing=&quot;1&quot;>SITE + INSIGHT TAG</text><text x=&quot;264&quot; y=&quot;114&quot; font-size=&quot;12.5&quot; fill=&quot;#F4F1EA&quot;>LinkedIn sees ALL traffic:</text><text x=&quot;264&quot; y=&quot;132&quot; font-size=&quot;12.5&quot; fill=&quot;#F4F1EA&quot;>search, SEO, content, ads</text>
+  <rect x=&quot;518&quot; y=&quot;66&quot; width=&quot;200&quot; height=&quot;86&quot; rx=&quot;12&quot; fill=&quot;#15151A&quot; stroke=&quot;#26262f&quot;/><rect x=&quot;518&quot; y=&quot;66&quot; width=&quot;200&quot; height=&quot;5&quot; rx=&quot;2&quot; fill=&quot;#5BB8E0&quot;/>
+  <text x=&quot;534&quot; y=&quot;92&quot; font-family=&quot;'JetBrains Mono'&quot; font-size=&quot;10.5&quot; fill=&quot;#5BB8E0&quot; letter-spacing=&quot;1&quot;>QUALIFY</text><text x=&quot;534&quot; y=&quot;114&quot; font-size=&quot;12.5&quot; fill=&quot;#F4F1EA&quot;>Company, size,</text><text x=&quot;534&quot; y=&quot;132&quot; font-size=&quot;12.5&quot; fill=&quot;#F4F1EA&quot;>seniority, function</text>
+  <rect x=&quot;758&quot; y=&quot;66&quot; width=&quot;200&quot; height=&quot;86&quot; rx=&quot;12&quot; fill=&quot;#15151A&quot; stroke=&quot;#26262f&quot;/><rect x=&quot;758&quot; y=&quot;66&quot; width=&quot;200&quot; height=&quot;5&quot; rx=&quot;2&quot; fill=&quot;#D4FF3D&quot;/>
+  <text x=&quot;774&quot; y=&quot;92&quot; font-family=&quot;'JetBrains Mono'&quot; font-size=&quot;10.5&quot; fill=&quot;#D4FF3D&quot; letter-spacing=&quot;1&quot;>90-DAY RETARGET</text><text x=&quot;774&quot; y=&quot;114&quot; font-size=&quot;12.5&quot; fill=&quot;#F4F1EA&quot;>Build trust,</text><text x=&quot;774&quot; y=&quot;132&quot; font-size=&quot;12.5&quot; fill=&quot;#F4F1EA&quot;>stay in the feed</text>
+  <rect x=&quot;998&quot; y=&quot;66&quot; width=&quot;176&quot; height=&quot;86&quot; rx=&quot;12&quot; fill=&quot;#15151A&quot; stroke=&quot;#26262f&quot;/><rect x=&quot;998&quot; y=&quot;66&quot; width=&quot;176&quot; height=&quot;5&quot; rx=&quot;2&quot; fill=&quot;#7BAA3E&quot;/>
+  <text x=&quot;1014&quot; y=&quot;92&quot; font-family=&quot;'JetBrains Mono'&quot; font-size=&quot;10.5&quot; fill=&quot;#7BAA3E&quot; letter-spacing=&quot;1&quot;>CONVERT</text><text x=&quot;1014&quot; y=&quot;114&quot; font-size=&quot;12.5&quot; fill=&quot;#F4F1EA&quot;>Lead form or</text><text x=&quot;1014&quot; y=&quot;132&quot; font-size=&quot;12.5&quot; fill=&quot;#F4F1EA&quot;>hand to sales</text>
+  <line x1=&quot;208&quot; y1=&quot;109&quot; x2=&quot;246&quot; y2=&quot;109&quot; stroke=&quot;#8f8c7f&quot; stroke-width=&quot;2&quot; marker-end=&quot;url(#bf)&quot;/>
+  <line x1=&quot;478&quot; y1=&quot;109&quot; x2=&quot;516&quot; y2=&quot;109&quot; stroke=&quot;#8f8c7f&quot; stroke-width=&quot;2&quot; marker-end=&quot;url(#bf)&quot;/>
+  <line x1=&quot;718&quot; y1=&quot;109&quot; x2=&quot;756&quot; y2=&quot;109&quot; stroke=&quot;#8f8c7f&quot; stroke-width=&quot;2&quot; marker-end=&quot;url(#bf)&quot;/>
+  <line x1=&quot;958&quot; y1=&quot;109&quot; x2=&quot;996&quot; y2=&quot;109&quot; stroke=&quot;#8f8c7f&quot; stroke-width=&quot;2&quot; marker-end=&quot;url(#bf)&quot;/>
+  </g></svg></div>
+  <figcaption>The tag sees every channel's traffic, not just LinkedIn's. That is why paid search, SEO, and content all compound into one qualified, retargetable pool instead of three separate spends.</figcaption></figure>
+</div></section>
+<section class=&quot;slide&quot;><div class=&quot;wrap&quot;>
+  <div class=&quot;kick&quot;>LinkedIn, the hub</div>
+  <h2 class=&quot;stitle&quot;>The LinkedIn budget, by <em>funnel stage</em></h2>
+  <p class=&quot;slede&quot;>The spend is not one pool. It splits across top, middle, and bottom of funnel, each with its own campaigns and its own share of the budget.</p>
+  <div class=&quot;fbar&quot;>
+    <div class=&quot;ft&quot; style=&quot;flex:40&quot;><span class=&quot;lbl&quot;>Top of funnel</span><span class=&quot;pct&quot;>~40%</span></div>
+    <div class=&quot;fm&quot; style=&quot;flex:42&quot;><span class=&quot;lbl&quot;>Middle of funnel</span><span class=&quot;pct&quot;>~42%</span></div>
+    <div class=&quot;fb&quot; style=&quot;flex:18&quot;><span class=&quot;lbl&quot;>Bottom of funnel</span><span class=&quot;pct&quot;>~18%</span></div>
+  </div>
+  <div class=&quot;cols3&quot;>
+    <div class=&quot;panel tt&quot;><span class=&quot;pill p-terra&quot;>Top &amp;middot; cold</span><h4 style=&quot;margin-top:9px&quot;>3 to 4 cold segments</h4><p>In-feed sponsored content to the named account universe, split by priority, persona, size, and signal.</p><p style=&quot;font-family:'JetBrains Mono';font-size:12.5px;color:var(--canopy-text);font-weight:700;margin:4px 0 0&quot;>$6k to $8k at scale</p></div>
+    <div class=&quot;panel tb&quot;><span class=&quot;pill p-blue&quot;>Middle &amp;middot; retarget</span><h4 style=&quot;margin-top:9px&quot;>3 to 4 in-feed retargeting</h4><p>Plus text, spotlight, and follower ads grouped together. The in-feed carries the budget; the grouped formats add coverage at low cost.</p><p style=&quot;font-family:'JetBrains Mono';font-size:12.5px;color:var(--canopy-text);font-weight:700;margin:4px 0 0&quot;>$5k to $7k at scale</p></div>
+    <div class=&quot;panel tm&quot;><span class=&quot;pill p-moss&quot;>Bottom &amp;middot; convert</span><h4 style=&quot;margin-top:9px&quot;>1 to 2 in-feed</h4><p>Lead generation form to 30-day engagers, plus bottom-funnel spotlight and follower ads. Small, high-intent audience.</p><p style=&quot;font-family:'JetBrains Mono';font-size:12.5px;color:var(--canopy-text);font-weight:700;margin:4px 0 0&quot;>$2k to $3k at scale</p></div>
+  </div>
+  <p class=&quot;note&quot;>Text, spotlight, and follower ads are grouped into the middle and bottom stages and run at low budget; they add frequency and coverage without a big line item. At launch the split is more top-heavy while the pool builds, then it balances toward the middle as the retargeting audience fills.</p>
+</div></section>
+<section class=&quot;slide&quot;><div class=&quot;wrap&quot;>
+  <div class=&quot;kick&quot;>The campaign architecture</div>
+  <h2 class=&quot;stitle&quot;>Every campaign, and how they <span class=&quot;bl&quot;>flow</span></h2>
+  <p class=&quot;slede&quot;>A box per campaign, grouped by funnel stage, with its monthly budget. Accounts move left to right as they engage; paid search feeds the pool from below.</p>
+  <div class=&quot;flow&quot;>
+    <div class=&quot;fstage tof&quot;><div class=&quot;sh&quot;>Top of funnel<b>Cold, awareness</b></div>
+      <div class=&quot;cbox&quot;><span class=&quot;ctag ch-li&quot;>LinkedIn</span><div class=&quot;cn&quot;>Cold ABM segments</div><div class=&quot;cd&quot;>3 to 4, by priority, persona, size, signal</div><div class=&quot;cb&quot;>$6k &amp;ndash; $8k</div></div>
+      <div class=&quot;cbox&quot;><span class=&quot;ctag ch-me&quot;>Meta</span><div class=&quot;cn&quot;>Cold mirror</div><div class=&quot;cd&quot;>Same accounts, cheaper reach</div><div class=&quot;cb&quot;>$3k &amp;ndash; $4k</div></div>
+    </div>
+    <div class=&quot;farrow&quot;>&amp;rarr;</div>
+    <div class=&quot;fstage mof&quot;><div class=&quot;sh&quot;>Middle of funnel<b>Retarget, trust</b></div>
+      <div class=&quot;cbox&quot;><span class=&quot;ctag ch-li&quot;>LinkedIn</span><div class=&quot;cn&quot;>In-feed 90-day retargeting</div><div class=&quot;cd&quot;>3 to 4, plus text, spotlight, follower grouped</div><div class=&quot;cb&quot;>$5k &amp;ndash; $7k</div></div>
+      <div class=&quot;cbox&quot;><span class=&quot;ctag ch-me&quot;>Meta</span><div class=&quot;cn&quot;>Signal retargeting</div><div class=&quot;cd&quot;>Accounts LinkedIn cannot reach</div><div class=&quot;cb&quot;>$2k &amp;ndash; $3k</div></div>
+    </div>
+    <div class=&quot;farrow&quot;>&amp;rarr;</div>
+    <div class=&quot;fstage bof&quot;><div class=&quot;sh&quot;>Bottom of funnel<b>Convert</b></div>
+      <div class=&quot;cbox&quot;><span class=&quot;ctag ch-li&quot;>LinkedIn</span><div class=&quot;cn&quot;>In-feed lead generation</div><div class=&quot;cd&quot;>1 to 2, plus spotlight and follower</div><div class=&quot;cb&quot;>$2k &amp;ndash; $3k</div></div>
+      <div class=&quot;cbox&quot; style=&quot;border-style:dashed;background:transparent&quot;><div class=&quot;cn&quot; style=&quot;color:var(--muted);font-weight:600&quot;>&amp;rarr; Hand to sales and pipeline</div></div>
+    </div>
+  </div>
+  <div class=&quot;feeder&quot;><span class=&quot;ctag ch-go&quot; style=&quot;flex:none&quot;>Google &amp;middot; paid search</span><div class=&quot;ft&quot;><b>In-market search feeds the retargeting pool.</b> Capture and conquest, $10k to $15k, bring buyers searching right now. The LinkedIn tag qualifies them and drops them into the middle of funnel, where the click you paid for finally converts.</div></div>
+</div></section>
+<section class=&quot;slide&quot;><div class=&quot;wrap&quot;>
+  <div class=&quot;kick&quot;>Meta, the reach layer</div>
+  <h2 class=&quot;stitle&quot;>Meta mirrors the cold list, and <span class=&quot;pk&quot;>covers what LinkedIn cannot</span></h2>
+  <div class=&quot;cols2&quot;>
+    <div class=&quot;panel tc&quot;><span class=&quot;pill p-clay&quot;>Mirror the cold top of funnel</span><p style=&quot;margin-top:8px&quot;>The same account-based cold segments run on Meta alongside LinkedIn, reaching the same target accounts at a fraction of the cost per thousand impressions. A match to the LinkedIn cold layer, not a separate experiment.</p></div>
+    <div class=&quot;panel tp&quot;><span class=&quot;pill p-pink&quot;>Retarget by signal, not guesswork</span><p style=&quot;margin-top:8px&quot;>We read LinkedIn account penetration and pull Company Intelligence API data through DemandSense to find the warm-pocket accounts LinkedIn is not reaching, then push those specific accounts to Meta. Coverage becomes a measured decision.</p></div>
+  </div>
+  <div class=&quot;callout cn&quot;><div class=&quot;k&quot;>// the point</div><p><b>Meta inherits a qualified pool and fills the gaps LinkedIn leaves.</b> It is not broad prospecting. It is targeted coverage, driven by the signal data on who you are and are not reaching.</p></div>
+</div></section>
+<section class=&quot;slide&quot;><div class=&quot;wrap&quot;>
+  <div class=&quot;kick&quot;>Coverage</div>
+  <h2 class=&quot;stitle&quot;>The whole account universe, but <em>not</em> one campaign</h2>
+  <p class=&quot;slede&quot;>We cover Tier-1, Tier-2, and Tier-3, the hundreds of same-profile enterprises, but we do not dump every account into one identical campaign. We segment, then concentrate spend and frequency where it makes sense.</p>
+  <div class=&quot;cols3&quot;>
+    <div class=&quot;panel tl&quot;><span class=&quot;pill p-canopy&quot;>Account priority</span><p>Tier-1 gets the highest frequency; the broader tiers get efficient reach.</p></div>
+    <div class=&quot;panel tb&quot;><span class=&quot;pill p-blue&quot;>Persona</span><p>Economic buyer, champion, users, and security each hear their own message.</p></div>
+    <div class=&quot;panel tt&quot;><span class=&quot;pill p-terra&quot;>Audience size</span><p>Thin segments run as tight ABM; larger ones can carry their own campaign.</p></div>
+    <div class=&quot;panel tp&quot;><span class=&quot;pill p-pink&quot;>Intent and signals</span><p>Accounts showing engagement or web activity move up in spend and speed.</p></div>
+    <div class=&quot;panel tm&quot;><span class=&quot;pill p-moss&quot;>Funnel stage</span><p>Cold, 90-day retargeting, and 30-day bottom-of-funnel each get their own budget.</p></div>
+    <div class=&quot;panel tc&quot;><span class=&quot;pill p-clay&quot;>Concentrate</span><p>The budget follows the accounts that lean in, rather than spreading evenly and thin.</p></div>
+  </div>
+</div></section>
+<section class=&quot;slide&quot;><div class=&quot;wrap&quot;>
+  <div class=&quot;kick&quot;>The media budget</div>
+  <h2 class=&quot;stitle&quot;>From a conservative <span class=&quot;te&quot;>floor</span> to full <span class=&quot;bl&quot;>scale</span></h2>
+  <p class=&quot;slede&quot;>The same flat fee manages the spend as it ramps. This is the number that was misread: $5k to $7k was Month 1 for LinkedIn, not the destination.</p>
+  <div class=&quot;ramp&quot;>
+    <div class=&quot;rcard&quot;><div class=&quot;rm&quot;>Month 1 &amp;middot; launch</div><div class=&quot;rv&quot;>$17k &amp;ndash; $20k</div><div class=&quot;rv2&quot;>Option 3, with search</div><div class=&quot;rn&quot;>Options 1 and 2, LinkedIn plus Meta: $7k to $10k. The conservative floor while pools build.</div></div>
+    <div class=&quot;rcard&quot; style=&quot;border-top-color:#FFB627&quot;><div class=&quot;rm&quot;>Month 2 &amp;middot; ramp</div><div class=&quot;rv&quot;>$25k &amp;ndash; $30k</div><div class=&quot;rv2&quot;>Option 3, with search</div><div class=&quot;rn&quot;>Options 1 and 2: $13k to $18k. Retargeting pools are filling and earning more spend.</div></div>
+    <div class=&quot;rcard&quot; style=&quot;border-top-color:#D4FF3D&quot;><div class=&quot;rm&quot;>Month 3+ &amp;middot; at scale</div><div class=&quot;rv&quot;>$34k &amp;ndash; $40k</div><div class=&quot;rv2&quot;>Option 3, with search</div><div class=&quot;rn&quot;>Options 1 and 2: $19k to $25k. Full segmentation across the ABM universe and funnel.</div></div>
+  </div>
+  <div class=&quot;callout cn&quot;><div class=&quot;k&quot;>// by channel at scale</div><p><b>LinkedIn $14k to $18k &amp;middot; Meta $5k to $7k &amp;middot; Google $10k to $15k.</b> The same fee that started at a $5k floor is managing up to $40k by Month 3. We scale into it as it proves, or faster if you want to start where you already spend.</p></div>
+</div></section>
+<section class=&quot;slide&quot;><div class=&quot;wrap&quot;>
+  <div class=&quot;kick&quot;>By campaign</div>
+  <h2 class=&quot;stitle&quot;>Where every media dollar <span class=&quot;bl&quot;>goes</span></h2>
+  <table class=&quot;btable&quot;>
+    <thead><tr><th class=&quot;rl&quot;></th><th>Option 1<span class=&quot;sub&quot;>The ads core</span></th><th>Option 2<span class=&quot;sub&quot;>The demand engine</span></th><th class=&quot;rechead&quot;><span class=&quot;recpill&quot;>Recommended</span><br>Option 3<span class=&quot;sub&quot; style=&quot;color:rgba(216,212,200,.85)&quot;>The connected system</span></th></tr></thead>
+    <tbody>
+      <tr class=&quot;sec&quot;><td>Media spend, by campaign, at full scale</td><td></td><td></td><td class=&quot;rec&quot;></td></tr>
+      <tr><td class=&quot;rl&quot;>LinkedIn, top of funnel<span class=&quot;d&quot;>3 to 4 cold segments</span></td><td class=&quot;num&quot;>$6k &amp;ndash; $8k</td><td class=&quot;num&quot;>$6k &amp;ndash; $8k</td><td class=&quot;num rec&quot;>$6k &amp;ndash; $8k</td></tr>
+      <tr><td class=&quot;rl&quot;>LinkedIn, middle of funnel<span class=&quot;d&quot;>3 to 4 in-feed retargeting + text, spotlight, follower</span></td><td class=&quot;num&quot;>$5k &amp;ndash; $7k</td><td class=&quot;num&quot;>$5k &amp;ndash; $7k</td><td class=&quot;num rec&quot;>$5k &amp;ndash; $7k</td></tr>
+      <tr><td class=&quot;rl&quot;>LinkedIn, bottom of funnel<span class=&quot;d&quot;>1 to 2 in-feed + spotlight, follower</span></td><td class=&quot;num&quot;>$2k &amp;ndash; $3k</td><td class=&quot;num&quot;>$2k &amp;ndash; $3k</td><td class=&quot;num rec&quot;>$2k &amp;ndash; $3k</td></tr>
+      <tr><td class=&quot;rl&quot;>Meta, cold mirror<span class=&quot;d&quot;>ABM segments matching the cold layer</span></td><td class=&quot;num&quot;>$3k &amp;ndash; $4k</td><td class=&quot;num&quot;>$3k &amp;ndash; $4k</td><td class=&quot;num rec&quot;>$3k &amp;ndash; $4k</td></tr>
+      <tr><td class=&quot;rl&quot;>Meta, signal retargeting<span class=&quot;d&quot;>accounts LinkedIn cannot reach</span></td><td class=&quot;num&quot;>$2k &amp;ndash; $3k</td><td class=&quot;num&quot;>$2k &amp;ndash; $3k</td><td class=&quot;num rec&quot;>$2k &amp;ndash; $3k</td></tr>
+      <tr><td class=&quot;rl&quot;>Google, search capture<span class=&quot;d&quot;>high-intent category terms</span></td><td class=&quot;num&quot; style=&quot;color:var(--muted)&quot;>&amp;ndash;</td><td class=&quot;num&quot; style=&quot;color:var(--muted)&quot;>&amp;ndash;</td><td class=&quot;num rec&quot;>$7k &amp;ndash; $10k</td></tr>
+      <tr><td class=&quot;rl&quot;>Google, competitor conquest<span class=&quot;d&quot;>comparison terms</span></td><td class=&quot;num&quot; style=&quot;color:var(--muted)&quot;>&amp;ndash;</td><td class=&quot;num&quot; style=&quot;color:var(--muted)&quot;>&amp;ndash;</td><td class=&quot;num rec&quot;>$3k &amp;ndash; $5k</td></tr>
+      <tr class=&quot;tot&quot;><td class=&quot;rl&quot; style=&quot;color:var(--bone)&quot;>Media at full scale</td><td>$18k &amp;ndash; $25k</td><td>$18k &amp;ndash; $25k</td><td class=&quot;rec&quot;>$28k &amp;ndash; $40k</td></tr>
+      <tr><td class=&quot;rl&quot; style=&quot;color:var(--bone);font-weight:700&quot;>Agency fee, separate from media</td><td class=&quot;num&quot;>$4,500/mo</td><td class=&quot;num&quot;>$5,500/mo</td><td class=&quot;num rec&quot;>$7,000/mo</td></tr>
+    </tbody>
+  </table>
+  <p class=&quot;note&quot;>Figures are at full scale, Month 3 onward; the prior slide shows the ramp. Text, spotlight, and follower ads are grouped into their stage at low budget. The fee is flat and separate from media. Web ID is free for 90 days; your own tools are not billed.</p>
+</div></section>
+<section class=&quot;slide&quot;><div class=&quot;wrap&quot;>
+  <div class=&quot;kick&quot;>Our recommendation</div>
+  <h2 class=&quot;stitle&quot;>Option 3, the <em>connected</em> system</h2>
+  <p class=&quot;slede&quot;>Paid search is the efficiency multiplier, so we recommend including it from the start rather than waiting.</p>
+  <div class=&quot;cols2&quot;>
+    <div class=&quot;panel tl&quot;><span class=&quot;pill p-canopy&quot;>Why this path</span><ul class=&quot;clean&quot; style=&quot;margin-top:10px&quot;><li><b>The system compounds:</b> search feeds LinkedIn, LinkedIn qualifies and retargets, Meta covers the gaps.</li><li><b>You dominate warm pools</b> a bigger budget covering the whole market cannot.</li><li><b>It hedges the ABM wait</b> with in-market traffic on a faster cycle.</li></ul></div>
+    <div class=&quot;panel tb&quot;><span class=&quot;pill p-blue&quot;>How to start</span><ul class=&quot;clean&quot; style=&quot;margin-top:10px&quot;><li><b>Start at a level that matches your current investment,</b> not a $5k floor.</li><li><b>We deploy it across the ABM universe</b> by priority, persona, signal, and funnel stage.</li><li><b>Scale toward $34k to $40k</b> as the pipeline forms and the pools prove efficient.</li></ul></div>
+  </div>
+  <div class=&quot;callout cn&quot;><div class=&quot;k&quot;>// the ask</div><p><b>Set the starting number where you are comfortable, and we build the whole system around it.</b> The fee is the same whether we manage the floor or the ceiling.</p></div>
+</div></section>
+<section class=&quot;slide&quot;><div class=&quot;wrap&quot;><div class=&quot;title-hero&quot;>
+  <div class=&quot;ey&quot;>Next step</div>
+  <h1>Let's set the number and <em>build</em>.</h1>
+  <p class=&quot;sub&quot;>One flat fee, whether you spend the floor or the ceiling. We deploy it across the account universe by priority, persona, signal, and funnel stage, and scale it as the pipeline forms.</p>
+  <a class=&quot;btn&quot; href=&quot;https://landbot.online/v3/H-2201411-ZNNL8EM9RF7C2XAC/index.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>Confirm the scope &amp;rarr;</a>
+  <div class=&quot;meta&quot;>Impactable &amp;middot; LinkedIn Marketing Partner &amp;middot; CAPI Certified &amp;middot; DemandSense and Website Visitor ID are our own software</div>
+</div></div></section>
+</div>
+<div class=&quot;hint&quot;>&amp;larr; &amp;rarr; to navigate</div>
+<div class=&quot;navbar&quot;>
+  <button class=&quot;nbtn&quot; id=&quot;prev&quot; aria-label=&quot;Previous&quot;>&amp;#8249;</button>
+  <span class=&quot;count&quot; id=&quot;count&quot;>1 / 18</span>
+  <button class=&quot;nbtn&quot; id=&quot;next&quot; aria-label=&quot;Next&quot;>&amp;#8250;</button>
+  <button class=&quot;nbtn&quot; id=&quot;themeToggle&quot; aria-label=&quot;Toggle light or dark&quot; title=&quot;Toggle theme&quot; style=&quot;font-size:16px&quot;>&amp;#9680;</button>
+</div>
+
+<script>
+(function(){
+  var slides=[].slice.call(document.querySelectorAll('.slide'));
+  var n=slides.length, i=0;
+  var pf=document.getElementById('pfill'), ct=document.getElementById('count');
+  function show(k){
+    i=Math.max(0,Math.min(n-1,k));
+    slides.forEach(function(s,x){s.classList.toggle('active',x===i);});
+    pf.style.width=((i+1)/n*100)+'%';
+    ct.textContent=(i+1)+' / '+n;
+    window.scrollTo(0,0);
+  }
+  document.getElementById('prev').addEventListener('click',function(){show(i-1);});
+  document.getElementById('next').addEventListener('click',function(){show(i+1);});
+  document.addEventListener('keydown',function(e){
+    if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' '){e.preventDefault();show(i+1);}
+    else if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();show(i-1);}
+    else if(e.key==='Home'){e.preventDefault();show(0);}
+    else if(e.key==='End'){e.preventDefault();show(n-1);}
+  });
+  show(0);
+})();
+</script>
+<script>(function(){var tb=document.getElementById('themeToggle');if(!tb)return;tb.addEventListener('click',function(){var d=document.documentElement.getAttribute('data-theme')==='dark';var nt=d?'light':'dark';document.documentElement.setAttribute('data-theme',nt);try{localStorage.setItem('imp_theme',nt);}catch(e){}});})();</script>
+</body>
+</html>"></iframe>
 </div>
 <script>
-var FR={"overview":"f-overview","whitespace":"f-whitespace","targeting":"f-targeting","messaging":"f-messaging","ecosystem":"f-ecosystem","howitworks":"f-howitworks","build":"f-build","paths":"f-paths"};
+var FR={"overview":"f-overview","whitespace":"f-whitespace","targeting":"f-targeting","messaging":"f-messaging","ecosystem":"f-ecosystem","howitworks":"f-howitworks","build":"f-build","paths":"f-paths","budget":"f-budget"};
 var DEFAULT='overview';
 function curTheme(){return document.documentElement.getAttribute('data-theme')==='dark'?'dark':'light';}
-function styleFrame(f){try{var d=f.contentDocument;if(!d)return;d.documentElement.setAttribute('data-theme',curTheme());if(!d.getElementById('__roominj')){var s=d.createElement('style');s.id='__roominj';s.textContent='.nav,.top,#themeBtn,#themeToggle,.tgl{display:none!important}';(d.head||d.documentElement).appendChild(s);}}catch(e){}}
+function styleFrame(f){try{var d=f.contentDocument;if(!d)return;d.documentElement.setAttribute('data-theme',curTheme());if(!d.getElementById('__roominj')){var s=d.createElement('style');s.id='__roominj';s.textContent='.nav,.top,#themeBtn,#themeToggle,.tgl,.brandbar{display:none!important}';(d.head||d.documentElement).appendChild(s);}}catch(e){}}
 function applyTheme(t){document.documentElement.setAttribute('data-theme',t);try{localStorage.setItem('imp_theme',t);}catch(e){}document.querySelectorAll('iframe.frame').forEach(function(f){try{f.contentDocument.documentElement.setAttribute('data-theme',t);}catch(e){}});var tb=document.getElementById('themeToggle');if(tb)tb.textContent=t==='dark'?'Light':'Dark';}
 function key(){var h=location.hash.slice(1);return FR[h]?h:DEFAULT;}
 function show(k){document.querySelectorAll('.tab').forEach(function(t){t.classList.toggle('active',t.dataset.k===k);});document.querySelectorAll('iframe.frame').forEach(function(f){f.classList.toggle('active',f.id===FR[k]);});}
